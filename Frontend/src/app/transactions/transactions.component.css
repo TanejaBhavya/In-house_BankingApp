@@ -1,0 +1,173 @@
+/* Page Background */
+/* Full Page Gradient Background (ONLY for this component) */
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #df0404, #855f74, #2c5e64);
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #df0404, #855f74, #2c5e64);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container Card */
+.container {
+  width: 500px;
+  max-width: 90%;
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+  color: #111;
+}
+
+
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #ffffff; /* Yamaha Red */
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  background: #e5e5e5;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tabs button:hover {
+  background: #c40000;
+  color: white;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c40000;
+  box-shadow: 0 0 5px rgba(196, 0, 0, 0.3);
+}
+
+/* Submit Buttons */
+button[type="submit"] {
+  padding: 10px;
+  background: #c40000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #a30000;
+}
+
+/* Success & Error Messages */
+.success {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e6ffe6;
+  color: #006600;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.error {
+  margin-top: 15px;
+  padding: 10px;
+  background: #ffe6e6;
+  color: #990000;
+  border-radius: 6px;
+  text-align: center;
+}
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tabs button i {
+  font-size: 14px;
+}
+
+/* Hover */
+.tabs button:hover {
+  background: #c40000;
+  color: white;
+}
+
+/* Active Tab */
+.tabs button.active {
+  background: #c40000;
+  color: white;
+  box-shadow: 0 4px 12px rgba(196, 0, 0, 0.3);
+}
+
+/* Submit Buttons Icon spacing */
+button[type="submit"] i {
+  margin-right: 6px;
+}

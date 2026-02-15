@@ -1,0 +1,124 @@
+/* ===== PAGE BACKGROUND ===== */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+    background: linear-gradient(135deg, #df0404, #855f74, #2c5e64);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== CARD ===== */
+.update-card {
+  width: 420px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  color: white;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ===== TITLE ===== */
+.update-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* ===== INPUT ===== */
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-group input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.form-group input:focus {
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 0 2px #4da8da;
+}
+
+/* ===== BUTTON ===== */
+.update-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #4da8da;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.update-btn:hover {
+  background: #3b8ac4;
+  transform: translateY(-2px);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== INPUT WITH ICON ===== */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 12px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 12px 12px 38px; /* space for icon */
+}
+
+/* ===== TITLE ICON ===== */
+.update-card h2 i {
+  margin-right: 8px;
+  color: #4da8da;
+}
+
+/* ===== BUTTON ICON ===== */
+.update-btn i {
+  margin-right: 6px;
+}
+

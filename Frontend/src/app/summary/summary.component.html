@@ -1,0 +1,53 @@
+<div class="page">
+
+  <div class="container" *ngIf="account">
+
+      <h2>Account Summary</h2>
+
+      <div class="card">
+          <p><strong>Name:</strong> {{ account.userName }}</p>
+          <p><strong>Account Number:</strong> {{ account.accountNum }}</p>
+          <p><strong>Email:</strong> {{ account.emailId }}</p>
+          <p><strong>Balance:</strong> ₹ {{ account.balance }}</p>
+          <p><strong>Created-by employee:</strong> {{ account.createdById }}</p>
+          <p><strong>Created-on:</strong> {{ account.createdAt }}</p>
+      </div>
+
+      <h3>Transaction History</h3>
+
+      <table *ngIf="transactions.length > 0">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Type</th>
+                  <th>Amount</th>
+                  <th>Balance-before</th>
+                  <th>Balance-after</th>
+                  <th>Performed-By</th>
+                  <th>Approved-By</th>
+                  <th>Approval-Status</th>
+                  <th>Date</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let t of transactions">
+                  <td>{{ t.id }}</td>
+                  <td>{{ t.type }}</td>
+                  <td>{{ t.amount }}</td>
+                  <td>{{ t.balanceBefore }}</td>
+                  <td>{{ t.balanceAfter }}</td>
+                  <td>{{ t.performedBy }}</td>
+                  <td>{{ t.approvedBy || '-' }}</td>
+                  <td>{{ t.approvalStatus }}</td>
+                  <td>{{ t.transactionTime | date:'dd MMM yyyy, hh:mm a' }}</td>
+              </tr>
+          </tbody>
+      </table>
+
+      <p *ngIf="transactions.length === 0">
+          No transactions found.
+      </p>
+
+  </div>
+
+</div>

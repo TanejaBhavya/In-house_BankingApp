@@ -1,0 +1,39 @@
+<div class="page">
+
+  <div class="container">
+
+    <h2>Pending Withdrawal Requests</h2>
+
+    <table *ngIf="pendingTransactions.length > 0">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Time</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let tx of pendingTransactions">
+          <td>{{ tx.id }}</td>
+          <td>₹ {{ tx.amount }}</td>
+          <td class="status">{{ tx.approvalStatus }}</td>
+          <td>{{ tx.doneAt | date:'dd MMM yyyy, hh:mm a' }}</td>
+          <td>
+            <button class="approve-btn" (click)="approve(tx.id)">
+              Approve
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="pendingTransactions.length === 0">
+      No Pending Requests
+    </p>
+
+  </div>
+
+</div>

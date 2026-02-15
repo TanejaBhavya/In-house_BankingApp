@@ -1,0 +1,99 @@
+
+/* Full Page Gradient */
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #df0404, #855f74, #2c5e64);
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+
+.container {
+  width: 85%;
+  margin: 50px auto;
+  color: white;
+}
+
+/* Main Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Summary Card */
+.card {
+  background: rgba(0, 0, 0, 0.45);   /* Dark glass instead of white */
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+/* Card Text */
+.card p {
+  margin: 12px 0;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.card strong {
+  color: #ffdede;   /* soft highlight */
+}
+
+/* Transaction Heading */
+h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: white;
+}
+
+
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Table Header */
+thead {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+th {
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+/* Table Rows */
+td {
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #f1f1f1;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}

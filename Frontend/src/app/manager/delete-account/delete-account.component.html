@@ -1,0 +1,20 @@
+<div class="page">
+
+  <div class="delete-container">
+
+    <h2>Delete Account</h2>
+
+    <div class="form-group">
+      <label>Enter Account ID</label>
+      <input type="number" [(ngModel)]="accountId">
+    </div>
+
+    <button class="btn-delete" (click)="deleteAccount()">
+      Delete Account
+    </button>
+
+    <p class="message">{{ message }}</p>
+
+  </div>
+
+</div>

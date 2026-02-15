@@ -1,0 +1,66 @@
+
+<div class="page">
+
+  
+  <div class="container">
+    <h2>Account Transactions</h2>
+    <p><strong>Account ID:</strong> {{ accountId }}</p>
+    
+    <div class="tabs">
+      <button 
+      [class.active]="activeTab==='deposit'" 
+      (click)="activeTab='deposit'">
+      <i class="fa-solid fa-money-bill-wave"></i> Deposit
+    </button>
+    
+    <button 
+    [class.active]="activeTab==='withdraw'" 
+    (click)="activeTab='withdraw'">
+    <i class="fa-solid fa-hand-holding-dollar"></i> Withdraw
+  </button>
+  
+  <button 
+  [class.active]="activeTab==='transfer'" 
+  (click)="activeTab='transfer'">
+  <i class="fa-solid fa-right-left"></i> Transfer
+</button>
+</div>
+
+
+<!-- DEPOSIT -->
+<div *ngIf="activeTab==='deposit'">
+  <h3>Deposit</h3>
+  <form [formGroup]="depositForm" (ngSubmit)="deposit()">
+    <input type="number" placeholder="Amount" formControlName="amount">
+    <button type="submit">Confirm Deposit</button>
+  </form>
+</div>
+
+<!-- WITHDRAW -->
+<div *ngIf="activeTab==='withdraw'">
+  <h3>Withdraw</h3>
+  <form [formGroup]="withdrawForm" (ngSubmit)="withdraw()">
+    <input type="number" placeholder="Amount" formControlName="amount">
+    <button type="submit">Confirm Withdraw</button>
+  </form>
+</div>
+
+<!-- TRANSFER -->
+<div *ngIf="activeTab==='transfer'">
+  <h3>Transfer</h3>
+  <p><strong>From Account:</strong> {{ accountId }}</p>
+  
+  <form [formGroup]="transferForm" (ngSubmit)="transfer()">
+    <input type="number" placeholder="To Account ID"
+    formControlName="toAccountId">
+    <input type="number" placeholder="Amount"
+    formControlName="amount">
+    <button type="submit">Confirm Transfer</button>
+  </form>
+</div>
+
+<p class="success" *ngIf="message">{{ message }}</p>
+<p class="error" *ngIf="error">{{ error }}</p>
+</div>
+
+</div>

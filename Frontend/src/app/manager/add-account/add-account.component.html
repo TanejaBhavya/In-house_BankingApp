@@ -1,0 +1,61 @@
+<div class="page">
+
+  <div class="container">
+    <h2>Create New Account</h2>
+
+    <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+
+      <input type="text"
+             placeholder="Full Name"
+             formControlName="userName">
+
+      <div *ngIf="accountForm.get('userName')?.touched && accountForm.get('userName')?.invalid"
+           class="error">
+        <span *ngIf="accountForm.get('userName')?.errors?.['required']">
+          Name is required
+        </span>
+        <span *ngIf="accountForm.get('userName')?.errors?.['pattern']">
+          Name must contain only alphabets
+        </span>
+      </div>
+
+      <input type="email"
+             placeholder="Email"
+             formControlName="emailId">
+
+      <div *ngIf="accountForm.get('emailId')?.touched && accountForm.get('emailId')?.invalid"
+           class="error">
+        <span *ngIf="accountForm.get('emailId')?.errors?.['required']">
+          Email is required
+        </span>
+        <span *ngIf="accountForm.get('emailId')?.errors?.['email']">
+          Please enter a valid email address
+        </span>
+      </div>
+
+      <input type="number"
+             placeholder="Contact Number"
+             formControlName="phoneNum">
+
+      <div *ngIf="accountForm.get('phoneNum')?.touched && accountForm.get('phoneNum')?.invalid"
+           class="error">
+        Contact number is required
+      </div>
+
+      <input type="number"
+             placeholder="Initial Balance"
+             formControlName="balance">
+
+      <div *ngIf="accountForm.get('balance')?.touched && accountForm.get('balance')?.invalid"
+           class="error">
+        Balance is required
+      </div>
+
+      <button type="submit">
+        Create Account
+      </button>
+
+    </form>
+  </div>
+
+</div>

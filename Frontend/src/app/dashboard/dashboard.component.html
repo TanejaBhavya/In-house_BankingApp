@@ -1,0 +1,55 @@
+<div class="navbar">
+  <div class="left-section">
+    <h2>Bank Management System</h2>
+
+    <!-- Manager Only Options -->
+    <div class="menu" *ngIf="role === 'ROLE_MANAGER'">
+      <button (click)="goToAddAccount()">Add New Account</button>
+      <button (click)="goToPending()">Pending Requests</button>
+      <button (click)="goToDelete()">Delete Account</button>
+      <button (click)="goToAllAccounts()">All Accounts</button>
+    </div>
+  </div>
+
+  <div class="user-info">
+    Welcome, <strong>{{ username }}</strong>
+    <button (click)="logout()">Logout</button>
+  </div>
+</div>
+
+
+<div class="container">
+  <h3>Accounts</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Account Number</th>
+        <th>Email</th>
+        <th>Balance</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let acc of accounts">
+        <td>{{ acc.userName }}</td>
+        <td>{{ acc.accountNum }}</td>
+        <td>{{ acc.emailId }}</td>
+        <td>{{ acc.balance | currency:'INR':'symbol':'1.2-2' }}</td>
+
+        <td class="actions">
+          <button (click)="goToUpdate(acc.id)">Update Contact</button>
+          <button (click)="goToTransactions(acc.id)">
+            Transaction
+          </button>
+          <button (click)="goToSummary(acc.id)">
+  Summary
+</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
